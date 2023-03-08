@@ -1,30 +1,36 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+
+<nav class="site">site</nav>
   <router-view/>
+  <footer>
+    <span>&copy;2023 - Tainá Miranda</span>
+
+  
+      <a href="https://github.com/tainamiranda2" class="fa fa-github"></a>
+      <a href="https://www.linkedin.com/in/tain%C3%A1-miranda-b337b3145" class="fa fa-linkedin"></a>
+  </footer>
 </template>
+<script>
+</script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+*{
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
-
-nav {
-  padding: 30px;
+footer{
+text-align: center;
+padding: 5px;
+background: #f82;
+color: #fff;
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.site{
+  margin:0;
+ padding: 2px;
 }
 </style>

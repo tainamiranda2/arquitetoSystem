@@ -1,0 +1,78 @@
+<template>
+    
+    <button class="button-gree">Ver serviços</button>
+
+    <a class="sair" href="/" >
+      Sair
+    </a>
+    <h2>Todos os arquitetos cadastrados</h2>
+    <p>Para pode cadastrar um serviço é preciso que voce escolha o arquiteto</p>
+
+    <table>
+        <tr>
+          <td>Nome</td>
+          <td>Telefone</td>
+          <td>Email</td>
+          <td>Genero</td>
+          <td>Idada</td>
+         
+
+        </tr>
+        <tr v-for="arq, index in arquiteto" :key="index">
+          <td>{{arq.nome}}</td>
+          <td>{{arq.telefone}}</td>
+          <td>{{arq.email}}</td>
+          <td>{{arq.genero}}</td>
+          <td>{{arq.idade}}</td>
+          <td>
+            <RouterLink class="enviar" 
+            :to="{name: 'servico',params:{id: arq.id} }" > 
+            Enviar serviço</RouterLink>
+          </td>
+        </tr>
+      </table>
+      
+      
+</template>
+<script>
+import axios from 'axios';
+
+export default{
+name: 'dashboardCliente',
+data(){
+        return{
+        arquiteto:[]
+    }
+    },
+    created: function(){
+
+axios.get("http://localhost:1700/arquiteto").then(res=>{
+   console.log(res.data)
+    this.arquiteto=res.data;
+}).catch(err => {
+            console.log(err);
+        })
+
+    }
+}
+</script>
+<style>
+.button-gree{
+    width: 30%;
+    background:#005;
+}
+table {
+  width:100%;
+  border:solid 2px #005;
+  padding: 10px;
+}
+td{
+  margin: 5px;
+
+  padding: 10px;
+}
+.enviar{
+  background: #005;
+  padding: 10px;
+}
+</style>
