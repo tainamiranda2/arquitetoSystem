@@ -33,3 +33,11 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+## pagian home
+<img src="./home.png"/>
+
+## pagian login
+<img src="./login.png"/>
+
+## pagian home
+<img src="./cadastroServico.png"/>
