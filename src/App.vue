@@ -50,10 +50,11 @@ h1,h2{
   color:red;
 }
 .sair{
+  margin-top: 50px;
   background: red;
-  padding: 10px;
-  margin:15px;
-  margin-top: 10px;
+  padding: 4px;
+ 
+  
 }
 table {
   width:100%;
@@ -66,8 +67,14 @@ td{
   border:solid 2px #005;
   padding: 10px;
 }
-td{
-  width:50%;
 
+button{
+    background: #f82;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+   width: 100%;
 }
 </style>

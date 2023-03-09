@@ -1,7 +1,6 @@
 <template>
     
-    <button class="button-gree">Ver serviços</button>
-
+ 
     <a class="sair" href="/" >
       Sair
     </a>
@@ -14,8 +13,11 @@
           <td>Telefone</td>
           <td>Email</td>
           <td>Genero</td>
-          <td>Idada</td>
-         
+          <td>Idade</td>
+          <td>Experiencia</td>
+          <td>Habilidades</td>
+          <td>Conhecimento</td>
+          <td>Ação</td>
 
         </tr>
         <tr v-for="arq, index in arquiteto" :key="index">
@@ -24,6 +26,9 @@
           <td>{{arq.email}}</td>
           <td>{{arq.genero}}</td>
           <td>{{arq.idade}}</td>
+          <td>{{arq.experiencia}}</td>
+             <td>{{arq.habilidades}}</td>
+                <td>{{arq.conhecimento}}</td>
           <td>
             <RouterLink class="enviar" 
             :to="{name: 'servico',params:{id: arq.id} }" > 

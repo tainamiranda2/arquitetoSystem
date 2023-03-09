@@ -4,22 +4,20 @@
       <router-link to="/">Home</router-link> |
 <router-link to="/login">Login</router-link>
     </nav>
-<p>Bem vindo ao sistema que conecta arquitetos com clientes que precisa de um serviço</p>
 
-<h2>Para se cadastrar como arquiteto
-   <a class="cad" href="/arquitetoRegister" >
-  Cadastrar
-</a> </h2>
 
-  <h2>Para se cadastrar como cliente
-    <a class="cad" href="/clienteRegister" >
-   Cadastrar
- </a>
-</h2>
  <div class="card">
-  <h3>Nome: Carlos Oliveira </h3>
-  <p>Telefone: (82) 99999-9999 </p>
-  <p>Idade: 28 anos</p>
+  <img src="../img/img2.png"/>
+  <h2>Para se cadastrar como arquiteto
+    <a class="cad" href="/arquitetoRegister" >
+   Cadastrar
+ </a> </h2>
+ 
+   <h2>Para se cadastrar como cliente
+     <a class="cad" href="/clienteRegister" >
+    Cadastrar
+  </a>
+ </h2>
  </div>
 
 
@@ -44,7 +42,12 @@ background: #f82;
 display: inline-block;
 padding: 16px;
 }
-
+.card img{
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin:auto;
+}
 
 a{
   color:#fff;
