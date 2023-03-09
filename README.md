@@ -1,4 +1,6 @@
 # arquitetofrontend
+## api Construida para este projeto 
+https://github.com/tainamiranda2/arquitetoSystem
 ### Construir um fluxo de cadastro e listagem dos cadastrados
 Um grupo de arquitetos tiveram uma brilhante ideia de criar um site onde clientes pudessem se registrar e procurar arquitetos cadastrados, podendo solicitar serviço através de um formulário.
 Primeiramente os arquitetos precisam criar uma conta para depois acessar um painel das solicitações de serviços, podendo aceitar, recusar ou excluir solicitações (Quem sabe poderem restaurar excluídos).
