@@ -30,14 +30,19 @@ npm run build
 ```
 npm run lint
 ```
+## o sistema possui;
+### Cadastro de usuário, arquitetos, serviço.
+### É possível que o usuário veja todos arquitetos cadastrados e enviar um serviço para ele, 
+### É possível o arquiteto ver todos os serviços para ele e definir se aceita, recusa ou exclui a solicitação de serviço.
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-## pagian home
+## pagina home
 <img src="./home.jpg"/>
 
-## pagian login
+## pagina login
 <img src="./login.png"/>
 
-## pagian home
+## pagina cadastrar serviços 
 <img src="./cadastroServico.png"/>
+ 
