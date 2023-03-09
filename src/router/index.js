@@ -10,7 +10,7 @@ import arquitetoRegister from '../views/arquiteto/arquitetoRegister.vue'
 
 import dashboardArquiteto from '../views/arquiteto/dashboardArquiteto.vue'
 import dashboardCliente from '../views/cliente/dashboardCliente.vue'
-
+import estadoServico from '../views/arquiteto/estadoServico'
 const routes = [
   {
     path: '/',
@@ -52,6 +52,11 @@ const routes = [
       path: '/dashboardCliente',
       name:'dashboardCliente',
       component:dashboardCliente
+  },
+  {
+    path:'/estadoServico/:id',
+    name:'estadoServico',
+    component: estadoServico
   }
  
 

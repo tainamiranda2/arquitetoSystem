@@ -16,7 +16,7 @@
         props:{
             type: String,
     placeholder: String,
-    label: String,
+    text: String,
     modelValue: String
         }
     }

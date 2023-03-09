@@ -47,7 +47,7 @@ data(){
     created: function(){
 
 axios.get("http://localhost:1700/arquiteto").then(res=>{
-   console.log(res.data)
+  // console.log(res.data)
     this.arquiteto=res.data;
 }).catch(err => {
             console.log(err);
@@ -61,16 +61,7 @@ axios.get("http://localhost:1700/arquiteto").then(res=>{
     width: 30%;
     background:#005;
 }
-table {
-  width:100%;
-  border:solid 2px #005;
-  padding: 10px;
-}
-td{
-  margin: 5px;
 
-  padding: 10px;
-}
 .enviar{
   background: #005;
   padding: 10px;

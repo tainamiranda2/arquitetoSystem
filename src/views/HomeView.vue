@@ -12,7 +12,7 @@
 </a> </h2>
 
   <h2>Para se cadastrar como cliente
-    <a class="cad" href="/arquitetoRegister" >
+    <a class="cad" href="/clienteRegister" >
    Cadastrar
  </a>
 </h2>

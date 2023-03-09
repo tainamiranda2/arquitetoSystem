@@ -1,8 +1,9 @@
 <template>
-<h1>Faça seu registro como arquiteto e solicite serviços</h1>
-<a href="/" >
+  <a href="/" class="sair" >
   Voltar
 </a>
+<h1>Faça seu registro como cliente e solicite serviços</h1>
+
 <div class="form">
   <div v-if="msg !=undefined">
   <p>{{msg}}</p>
@@ -10,30 +11,30 @@
 <Input type="email" 
 v-model="email" 
 placeholder="Informe o email"
- label="Informe seu email"
+ text="Informe seu email"
   />
 
   <Input type="text" 
 v-model="nome" 
 placeholder="Informe o nome"
- label="Informe o nome" />
+text="Informe o nome" />
 
  <Input type="tel" 
 v-model="telefone" 
 placeholder="Informe o telefone"
- label="Informe a telefone" 
+text="Informe a telefone" 
  />
 
  <Input type="number" 
 v-model="idade" 
 placeholder="Informe a sua idade"
- label="Informe a sua idade"
+text="Informe a sua idade"
   />
 
  <Input type="text" 
  v-model="genero" 
  placeholder="Informe qual genero voce se identifica"
-  label="Informe qual genero voce se identifica"
+ text="Informe qual genero voce se identifica"
    />
 
 
@@ -41,7 +42,8 @@ placeholder="Informe a sua idade"
  <Input type="password" 
 v-model="senha" 
 placeholder="Informe a senha"
- label="Informe a senha" />
+text="Informe a senha" 
+ />
 
 <button @click="register">Cadastrar</button>
 </div>
@@ -68,13 +70,14 @@ return{
   msg:''
 
 }
+
   },
   components:{
     Input
   },
    methods:{
     register(){
- 
+
 axios.post("http://localhost:1700/cliente",{
    nome: this.nome,
    email: this.email,
@@ -82,10 +85,12 @@ axios.post("http://localhost:1700/cliente",{
    idade: this.idade,
    genero: this.genero,
    papel: this.papel,
-telefone: this.telefone
+telefone:this.telefone
 
 }).then(res=>{
   console.log(res)
+  this.$router.push({name: 'dashboardCliente'})
+
 }).catch(err=>{
  
   var msgErro=err.response.data;
@@ -96,17 +101,3 @@ telefone: this.telefone
    }
 }
 </script>
-<style>
-.form{
-width:50%;
-color: #f82;
-display: block;
-margin:auto;
-margin-top: 50px;
-margin-bottom: 50px;
-}
-h1{
-  margin:5px;
-  text-align: center;
-}
-</style>

@@ -3,18 +3,36 @@
         Sair
       </a>
     <h2>Veja todos os serviços para voce</h2>
-    <div class="card" v-for="serv, index in servicos" :key="index">
-    <h1>Nome do serviço:{{serv.nome}}</h1>
-    <h3>Descrição:{{serv.descricao}}</h3>
-    <p>Prazo Inicial:{{serv.prazoF}}</p>
-    <p>Prazo Inicial:{{serv.prazoI}}</p>
-<span>Aceita ou recusa essa oferta de serviço</span>
-<select>
-<option>Aceitar</option>
-<option>Recusar</option>
+    <div v-if="servicos.length===0">
+        <h2>Não há nenhum serviço cadastrado</h2>
+    </div>
+    
+        <table>
+            <tr>
+                <td>Nome</td>
+                <td>Descrição</td>
+                <td>Prazo inicial</td>
+                <td>Prazo Final</td>
+                <td>Estado</td>
+                <td>Ação</td>
+            </tr>
+ <tr  v-for="serv, index in servicos" :key="index">
+    <td>Nome do serviço:{{serv.nome}}</td>
+    <td>Descrição:{{serv.descricao}}</td>
+    <td>Prazo Inicial:{{serv.prazoF}}</td>
+    <td>Prazo Inicial:{{serv.prazoI}}</td>
+    <td>Estado:{{serv.estado}}</td>
+    <td>
+        <RouterLink class="enviar" 
+        :to="{name: 'estadoServico',params:{id: serv.id} }" > 
+        Alterar Estado</RouterLink>
+        
+      </td>
+</tr>
 
-</select>
-</div>
+</table>
+
+ 
 </template>
 <script>
 import axios from 'axios';
@@ -37,15 +55,3 @@ axios.get("http://localhost:1700/servico").then(res=>{
     }
 }
 </script>
-<style>
-
-h2{
-    text-align: center;
-    color:#f82
-}
-.sair{
-    background: red;
-    padding: 10px;
-    margin:5px;
-}
-</style>

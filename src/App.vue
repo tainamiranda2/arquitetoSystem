@@ -19,6 +19,14 @@
   box-sizing: border-box;
   margin: 0;
 }
+.form{
+  width:50%;
+  color: #f82;
+  display: block;
+  margin:auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  }
 footer{
 text-align: center;
 padding: 5px;
@@ -32,5 +40,34 @@ width: 100%;
 .site{
   margin:0;
  padding: 2px;
+}
+h1,h2{
+  color:#f82;
+  margin:5px;
+  text-align: center;
+}
+.erro{
+  color:red;
+}
+.sair{
+  background: red;
+  padding: 10px;
+  margin:15px;
+  margin-top: 10px;
+}
+table {
+  width:100%;
+  border:solid 2px #005;
+  padding: 10px;
+  margin: 5px;
+}
+td{
+  margin: 5px;
+  border:solid 2px #005;
+  padding: 10px;
+}
+td{
+  width:50%;
+
 }
 </style>
